@@ -2,25 +2,40 @@ import random
 
 def main():
     def setup_player():
+        
+        player_name = input("Please enter your player name: ") #Ask the user for their name using input()
+        print(player_name)
+        return player_name
+        health = 10
+        inventory = []
+        start_dict = {"name": player_name, "health": health, "inventory": inventory} #Initialize a dictionary with keys: "name", "health", and "inventory"
+
+        return start_dict #Return the dictionary
+    
+    setup_player()
+
+    player = setup_player()
         """
         Prompts the user to create their player profile.
 
         Returns:
             dict: A dictionary containing player stats with the following keys:
                 - "name" (str): Player's name (entered by user)
-                - "health" (int): Starting health, set to 10
+                - "health" (int): Starting health, set to 10 
                 - "inventory" (list): Starts as an empty list
         Example:
             >>> setup_player()
             Enter your name: Ailene
             {'name': 'Ailene', 'health': 10, 'inventory': []}
         """
-        # TODO: Ask the user for their name using input()
-        # TODO: Initialize a dictionary with keys: "name", "health", and "inventory"
-        # TODO: Return the dictionary
+        # Done. TODO: Ask the user for their name using input()
+        # Done. TODO: Initialize a dictionary with keys: "name", "health", and "inventory"
+        # Done. TODO: Return the dictionary
 
 
     def create_treasures():
+        treasure_dict = 
+        
         """
         Creates a dictionary of treasures, where each treasure has a value.
 
