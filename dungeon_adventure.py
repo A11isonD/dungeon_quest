@@ -166,7 +166,7 @@ def main():
         print(f'Treasures collected: {', '.join(set(player['inventory']))}')
         print(f'You collected {treasure_count} items worth {final_score} points!')
 
-        print(f'Thanks for playing, {player[name]}!')
+        print(f'Thanks for playing, {player['name']}!')
 
 
         # TODO: Calculate total score by summing the value of collected treasures
@@ -203,7 +203,7 @@ def main():
                     return
                 elif player_choice == 2:
                     if room_number <= 4:
-                        print(f'Moving to room {room+1}...')
+                        print(f'Moving to room {room + 1}...')
                     else:
                         print('There are no more rooms to explore!')
                     break
