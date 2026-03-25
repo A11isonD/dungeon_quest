@@ -62,7 +62,7 @@ def main():
         # Done. TODO: Return the dictionary
 
 
-    def display_options(room):
+    def display_options(room_number):
         
         """
         Displays available options for the player in the current room.
@@ -80,8 +80,8 @@ def main():
         """
      
         print(f"""
-            You are in room {room}. 
-            What would you like to do? 
+            You are in room {room_number}. 
+            What would you like to do?   
             1. Search for treasure 
             2. Move to next room 
             3. Check health and inventory 
@@ -192,7 +192,7 @@ def main():
                 4. Quit
             - Health below 1 ends the game early.
         """
-        for room in range(1,6):
+        for room in range(1, 6):
             while True:
                 display_options(room)
                 player_choice = int(input('What do you want to do? Choose 1-4:  '))
@@ -204,10 +204,10 @@ def main():
                         return
                 elif player_choice == 2:
                     if room <= 4:
-                        print(f'Moving to room {room+1}...')
+                        print(f'Moving to room {room + 1}...')
                     else:
                         print('There are no more rooms to explore!')
-                        break
+                    break
                 elif player_choice == 3:
                     check_status(player)
                 elif player_choice == 4:
